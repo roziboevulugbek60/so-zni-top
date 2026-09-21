@@ -1,0 +1,269 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+
+  <title>WORD GUESS — ULUG'BEK.R</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="game">
+
+  <!-- START SCREEN -->
+  <section id="startScreen" class="screen active">
+
+    <div class="logo">🔤</div>
+
+    <h1>WORD GUESS</h1>
+
+    <p class="subtitle">
+      Guess the hidden English word!
+    </p>
+
+    <div class="start-card">
+
+      <input
+        id="playerName"
+        type="text"
+        maxlength="20"
+        placeholder="Enter your name"
+      >
+
+      <button id="startBtn" class="primary">
+        🚀 START GAME
+      </button>
+
+    </div>
+
+    <div class="record-box">
+      🏆 Best Score:
+      <b id="startRecord">0</b>
+    </div>
+
+    <footer>
+      Produced by:
+      <strong>ULUG'BEK.R</strong>
+    </footer>
+
+  </section>
+
+
+  <!-- GAME SCREEN -->
+  <section id="gameScreen" class="screen">
+
+    <header>
+
+      <button id="backBtn" class="small-btn">
+        ←
+      </button>
+
+      <div class="player">
+        <small>PLAYER</small>
+        <b id="gamePlayer">Player</b>
+      </div>
+
+      <div class="score">
+        🏆 <span id="score">0</span>
+      </div>
+
+    </header>
+
+
+    <div class="game-info">
+
+      <div class="info-card">
+        <span>❤️</span>
+        <b id="lives">❤️❤️❤️</b>
+        <small>LIVES</small>
+      </div>
+
+      <div class="info-card">
+        <span>⏱️</span>
+        <b id="timer">60</b>
+        <small>TIME</small>
+      </div>
+
+      <div class="info-card">
+        <span>🎯</span>
+        <b id="attempts">0</b>
+        <small>TRIES</small>
+      </div>
+
+    </div>
+
+
+    <div class="progress">
+      <div id="timeProgress"></div>
+    </div>
+
+
+    <main class="game-card">
+
+      <div class="word-icon">
+        🔤
+      </div>
+
+      <div class="length">
+        WORD LENGTH:
+        <b id="wordLength">0</b>
+      </div>
+
+
+      <div id="wordDisplay" class="word-display">
+        _ _ _ _ _
+      </div>
+
+
+      <div id="hint" class="hint">
+        💡 Hint
+      </div>
+
+
+      <div id="message" class="message">
+        Guess the word!
+      </div>
+
+
+      <input
+        id="guessInput"
+        type="text"
+        maxlength="15"
+        autocomplete="off"
+        placeholder="Type the word..."
+      >
+
+
+      <button id="guessBtn" class="primary">
+        🎯 CHECK WORD
+      </button>
+
+
+      <div class="or">
+        OR GUESS LETTERS
+      </div>
+
+
+      <div id="keyboard" class="keyboard"></div>
+
+
+      <div id="history" class="history"></div>
+
+    </main>
+
+
+    <button id="ratingBtn" class="secondary">
+      🏆 LEADERBOARD
+    </button>
+
+
+    <footer>
+      Produced by:
+      <strong>ULUG'BEK.R</strong>
+    </footer>
+
+  </section>
+
+
+  <!-- RESULT SCREEN -->
+  <section id="resultScreen" class="screen">
+
+    <div id="resultIcon" class="result-icon">
+      🏆
+    </div>
+
+    <h1 id="resultTitle">
+      CONGRATULATIONS!
+    </h1>
+
+    <p id="resultText">
+      You guessed the word!
+    </p>
+
+
+    <div class="final-score">
+
+      <small>SCORE</small>
+
+      <strong id="finalScore">
+        0
+      </strong>
+
+    </div>
+
+
+    <div class="results">
+
+      <div>
+        <b id="finalAttempts">0</b>
+        <span>TRIES</span>
+      </div>
+
+      <div>
+        <b id="finalTime">0</b>
+        <span>TIME LEFT</span>
+      </div>
+
+      <div>
+        <b id="finalRecord">0</b>
+        <span>RECORD</span>
+      </div>
+
+    </div>
+
+
+    <button id="againBtn" class="primary">
+      🔄 PLAY AGAIN
+    </button>
+
+    <button id="homeBtn" class="secondary">
+      🏠 HOME
+    </button>
+
+
+    <footer>
+      Produced by:
+      <strong>ULUG'BEK.R</strong>
+    </footer>
+
+  </section>
+
+
+  <!-- LEADERBOARD -->
+  <section id="ratingScreen" class="screen">
+
+    <button id="ratingBack" class="small-btn">
+      ← BACK
+    </button>
+
+    <h1>🏆 LEADERBOARD</h1>
+
+    <p class="subtitle">
+      Best players
+    </p>
+
+    <div id="leaderboard" class="leaderboard"></div>
+
+    <button id="clearRating" class="danger">
+      🗑️ CLEAR LEADERBOARD
+    </button>
+
+    <footer>
+      Produced by:
+      <strong>ULUG'BEK.R</strong>
+    </footer>
+
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
